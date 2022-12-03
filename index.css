@@ -247,6 +247,36 @@ body {
   opacity: 1;
 }
 
+.other-title {
+  margin-top: 50px;
+  text-align: center;
+  font-size: x-large;
+  font-weight: 900;
+  margin-bottom: 10px;
+}
+
+.other-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.other-element {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.other-icon {
+  width: 30px;
+}
+
+.other-text {
+  font-size: larger;
+}
+
 .footer {
   display: flex;
   justify-content: center;
