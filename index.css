@@ -2,14 +2,14 @@
   --bg: rgb(10, 10, 10);
   --accent: rgb(136, 71, 255);
 
-  --tag-tech: rgb(140, 140, 140);
-  --tag-expensive: rgb(181, 92, 92);
-  --tag-semi-expensive: rgb(181, 132, 92);
-  --tag-fiy: rgb(175, 181, 92);
-  --tag-decor: rgb(92, 181, 109);
-  --tag-toy: rgb(92, 175, 181);
-  --tag-clothing: rgb(92, 93, 181);
-  --tag-giftcard: rgb(131, 92, 181);
+  --tag-tech: rgba(140, 140, 140, 50%);
+  --tag-expensive: rgba(181, 92, 92, 50%);
+  --tag-semi-expensive: rgba(181, 132, 92, 50%);
+  --tag-fiy: rgba(175, 181, 92, 50%);
+  --tag-decor: rgba(92, 181, 109, 50%);
+  --tag-toy: rgba(92, 175, 181, 50%);
+  --tag-clothing: rgba(92, 93, 181, 50%);
+  --tag-giftcard: rgba(131, 92, 181, 50%);
 
   --price-1: rgb(73, 195, 204);
   --price-5: rgb(73, 204, 171);
@@ -26,6 +26,8 @@
   --price-400: rgb(152, 59, 175);
   --price-450: rgb(110, 51, 158);
   --price-500: rgb(59, 35, 124);
+
+  --bouncy: cubic-bezier(0, 2, 0.8, 1);
 }
 
 @font-face {
@@ -130,11 +132,12 @@ body {
   color: white;
   box-shadow: 0px 0px 0px 5px var(--bg), 0px 0px 0px 7px white,
     inset 0px 0px 200px 10px black;
+  transition: box-shadow var(--bouncy) 0.25s;
 }
 
 .box:hover {
-  box-shadow: 0px 0px 0px 7px var(--bg), 0px 0px 0px 9px white,
-    inset 0px 0px 200px 10px black;
+  box-shadow: 0px 0px 0px 9px var(--bg), 0px 0px 0px 11px white,
+    inset 0px 0px 200px 12px black;
 }
 
 .box:active {
@@ -154,6 +157,7 @@ body {
   border-radius: 23px;
   white-space: nowrap;
   line-height: 30px;
+  backdrop-filter: blur(5px);
 }
 
 .card1 {
@@ -202,6 +206,12 @@ body {
   padding-bottom: 1px;
   border-radius: 5px;
   box-shadow: 0px 0px 0px 5px var(--bg);
+  width: 50;
+  transition: width ease-in-out 0.25s;
+}
+
+.box-new:hover {
+  width: 500px;
 }
 
 .box-price {
@@ -222,6 +232,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
 }
 
 .box-soldout-txt {
