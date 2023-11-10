@@ -1,27 +1,4 @@
 const items = {
-    iphone: {
-        name: 'iPhone 13',
-        desc: '',
-        specs: 'Color: Midnight',
-        img: 'iPhone.jpg',
-        tags: [
-            'Tech'
-        ],
-        price: '400 - $700',
-        pColor: 525,
-        links: {
-            apple: {
-                name: 'Apple',
-                address: 'https://www.apple.com/shop/buy-iphone/iphone-13',
-                price: '$699'
-            },
-            amazon: {
-                name: 'Amazon',
-                address: 'https://www.amazon.com/dp/B09LNW3CY2/ref=twister_B09LP9P1FM?_encoding=UTF8&th=1',
-                price: '$560'
-            }
-        }
-    },
     steamDeck: {
         name: 'Steam Deck',
         desc: 'A portable handheld console, like the Nintendo Switch, but it can play PC games.',
@@ -76,6 +53,34 @@ const items = {
             }
         }
     },
+    ultrakillSweater: {
+        name: 'ULTRAKILL Holiday sweater (pre-order)',
+        desc: 'Super cool sweater from one of my favorite games.',
+        img: 'ultrakillSweater.webp',
+        tags: ['Clothing'],
+        price: 80,
+        links: {
+            newBlood: {
+                name: 'NewBlood Store',
+                address: 'https://newbloodstore.com/products/ultrakill-christmas-sweater?variant=42303524896920',
+                price: '$79.99 '
+            }
+        }
+    },
+    marioWonder: {
+        name: 'Super Mario Bros. Wonder',
+        desc: '"Classic Mario gameplay is turned on its head with the addition of Wonder Flowers in the Super Mario Bros. Wonder game."',
+        img: 'marioWonder.jpg',
+        tags: ['Game'],
+        price: 60,
+        links: {
+            nintendo: {
+                name: 'Nintendo',
+                address: 'https://supermariobroswonder.nintendo.com/',
+                price: '$60'
+            }
+        }
+    },
     breadCatTee: {
         name: 'Bread Cat Tee',
         desc: 'A very cool shirt.',
@@ -93,19 +98,25 @@ const items = {
             }
         }
     },
-    eddieCase: {
-        name: 'Eddie iPhone XR case',
+    theStanleyParable: {
+        name: 'The Stanley Parable: Ultra Deluxe',
         desc: '',
-        img: 'eddieCase.png',
+        specs: '"You will play as Stanley, and you will not play as Stanley. You will make a choice, and you will become powerless. You are not here to win. The Stanley Parable is a game that plays you."',
+        img: 'theStanleyParable.jpg',
         tags: [
-            'Accessory'
+            'Game',
+            'Digital'
         ],
-        price: 11,
+        price: 25,
         links: {
+            steam: {
+                name: 'Steam',
+                address: 'https://store.steampowered.com/app/1703340/The_Stanley_Parable_Ultra_Deluxe/',
+                price: '$25'
+            },
             amazon: {
-                name: 'Streamlabs',
-                address: 'https://streamlabs.com/notdebread/merch/4806517',
-                price: '$10.60'
+                name: 'Trailer',
+                address: 'https://youtu.be/0QyA9nv23wM?si=hVz6DyVyzlCVvgBF',
             }
         }
     },
@@ -209,7 +220,11 @@ function openMenu(item) {
             const linkA = document.createElement('a')
             linkA.setAttribute('href', item.links[link].address)
             linkA.setAttribute('target','_blank')
-            linkA.innerText = `${item.links[link].name} - ${item.links[link].price}`
+            if(item.links[link].price) {
+                linkA.innerText = `${item.links[link].name} - ${item.links[link].price}`
+            } else {
+                linkA.innerText = `${item.links[link].name}`
+            }
             doge('menuButtons').appendChild(linkA)
         }
     }
