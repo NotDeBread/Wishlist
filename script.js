@@ -37,22 +37,6 @@ const items = {
             }
         }
     },
-    joyCons: {
-        name: 'Joy-Cons',
-        desc: 'Controllers used to play on the Nintendo Switch.',
-        img: 'joy-cons.jpg',
-        tags: [
-            'Tech'
-        ],
-        price: 80,
-        links: {
-            amazon: {
-                name: 'Amazon',
-                address: 'https://a.co/d/ag3WJ0L',
-                price: '$80'
-            }
-        }
-    },
     ultrakillSweater: {
         name: 'ULTRAKILL Holiday sweater (pre-order)',
         desc: 'Super cool sweater from one of my favorite games.',
@@ -69,9 +53,12 @@ const items = {
     },
     marioWonder: {
         name: 'Super Mario Bros. Wonder',
-        desc: '"Classic Mario gameplay is turned on its head with the addition of Wonder Flowers in the Super Mario Bros. Wonder game."',
+        desc: '',
         img: 'marioWonder.jpg',
-        tags: ['Game'],
+        tags: [
+            'Game',
+            'Digital'
+        ],
         price: 60,
         links: {
             nintendo: {
@@ -117,6 +104,50 @@ const items = {
             amazon: {
                 name: 'Trailer',
                 address: 'https://youtu.be/0QyA9nv23wM?si=hVz6DyVyzlCVvgBF',
+            }
+        }
+    },
+    outerWilds: {
+        name: 'Outer Wilds',
+        desc: 'Named Game of the Year 2019 by Giant Bomb, Polygon, Eurogamer, and The Guardian, Outer Wilds is a critically-acclaimed and award-winning open world mystery about a solar system trapped in an endless time loop.',
+        specs: '',
+        img: 'outerWilds.jpg',
+        tags: [
+            'Game',
+            'Digital'
+        ],
+        price: 25,
+        links: {
+            steam: {
+                name: 'Steam',
+                address: 'https://store.steampowered.com/app/753640/Outer_Wilds/',
+                price: '$25'
+            },
+            amazon: {
+                name: 'Trailer',
+                address: 'https://youtu.be/d6LGnVCL1_A?si=7U1JVlaxxgeEzyjJ',
+            }
+        }
+    },
+    lethalCompany: {
+        name: 'Lethal Company',
+        desc: 'A co-op horror about scavenging at abandoned moons to sell scrap to the Company.',
+        specs: '',
+        img: 'lethalCompany.jpg',
+        tags: [
+            'Game',
+            'Digital'
+        ],
+        price: 10,
+        links: {
+            steam: {
+                name: 'Steam',
+                address: 'https://store.steampowered.com/app/1966720/Lethal_Company/',
+                price: '$10'
+            },
+            amazon: {
+                name: 'Trailer',
+                address: 'https://youtu.be/m5RB0Ej1mFg?si=KaifEFoYHHwKPhmN',
             }
         }
     },

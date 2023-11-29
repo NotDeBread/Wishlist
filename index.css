@@ -12,6 +12,15 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
+a {
+  color: unset;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
 #menuContainer {
   width: 100vw;
   height: 100vh;
@@ -207,6 +216,52 @@ body {
   z-index: 1;
 }
 
+#giftcardContainer {
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 50px;
+}
+
+#giftcardTitle {
+  font-size: 2em;
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+
+#giftcards {
+  display: flex;
+}
+
+#giftcards a {
+  transition: translate ease-out 0.25s;
+  cursor: pointer;
+}
+
+#giftcards a img {
+  border-radius: 15px;
+}
+
+#giftcards a:nth-child(1) {
+  transform: rotate(-20deg) translateX(50px) translateY(40px);
+  z-index: 3;
+}
+
+#giftcards a:nth-child(2) {
+  z-index: 2;
+}
+
+#giftcards a:nth-child(3) {
+  z-index: 1;
+  transform: rotate(20deg) translateX(-50px) translateY(40px);
+}
+
+#giftcards a:hover {
+  translate: 0px -50px;
+  z-index: 4;
+}
+
 .footer {
   display: flex;
   justify-content: center;
@@ -228,5 +283,14 @@ body {
   }
   .title {
     font-size: 1.25em;
+  }
+
+  #giftcards {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  #giftcards a {
+    transform: none !important;
   }
 }
