@@ -22,18 +22,56 @@ const items = {
         }
     },
     CPU: {
-        name: 'Intel Core i7-9700K',
-        desc: 'A computer CPU used to make things run faster and smoother.',
-        img: 'CPU.png',
+        name: 'Intel Core i7-11700K ',
+        desc: `
+            A computer CPU used to make things run faster and smoother.<br>
+            `,
+        specs: `<span style="font-weight: 700; color: red">WARNING!</span><span style="color: red"> This can only be used I have the "MSI MPG Z590" motherboard!</span>`,
+        img: 'cpu.jpg',
         tags: [
             'Tech'
         ],
-        price: 314,
+        price: 282,
         links: {
             amazon: {
                 name: 'Amazon',
-                address: 'https://a.co/d/7dP2ppn',
-                price: '$314'
+                address: 'https://www.amazon.com/Intel-i7-11700K-Desktop-Processor-Unlocked/dp/B08X6ND3WP/ref=sr_1_3?crid=16RFYNV7PHVYO&keywords=intel%2Bi7%2B11700k&sprefix=intel%2Bi7%2B11%2Caps%2C136&sr=8-3&ufe=app_do%3Aamzn1.fos.17d9e15d-4e43-4581-b373-0e5c1a776d5d',
+                price: '$282'
+            }
+        }
+    },
+    motherboard: {
+        name: 'MSI MPG Z590',
+        desc: `
+            The part of the computer that holds all of the components.<br>
+            `,
+        specs: `<span style="font-weight: 700; color: red">WARNING!</span><span style="color: red"> This can only be used I have the "Intel Core i7-11700K" CPU!</span>`,
+        img: 'motherboard.jpg',
+        tags: [
+            'Tech'
+        ],
+        price: 255,
+        links: {
+            amazon: {
+                name: 'Amazon',
+                address: 'https://www.amazon.com/dp/B08WCNL4WF/ref=emc_b_5_t',
+                price: '$255'
+            }
+        }
+    },
+    ssd: {
+        name: 'SAMSUNG 980 PRO SSD',
+        desc: `The component of the computer that handles download speeds and holds storage.`,
+        img: 'ssd.png',
+        tags: [
+            'Tech'
+        ],
+        price: 86,
+        links: {
+            amazon: {
+                name: 'Amazon',
+                address: 'https://www.amazon.com/SAMSUNG-PCIe-Internal-Gaming-MZ-V8P1T0B/dp/B09JHL33X7/ref=sr_1_3?crid=20RN5O4YKW0B8&keywords=980%2Bevo&s=electronics&sprefix=980%2Bevo%2Celectronics%2C136&sr=1-3&ufe=app_do%3Aamzn1.fos.17d9e15d-4e43-4581-b373-0e5c1a776d5d&th=1',
+                price: '$85.55'
             }
         }
     },
@@ -200,7 +238,15 @@ for(let item in items) {
     </div>
     <div class="itemVignette"></div>
     `
-    itemDiv.style.backgroundImage = `url(images/items/${items[item].img})`
+    if(items[item].img.startsWith('https://')) {
+        itemDiv.style.backgroundImage = items[item].img
+        console.log(items[item].img)
+
+    } else {
+        itemDiv.style.backgroundImage = `url(images/items/${items[item].img})`
+        console.log(`url(images/items/${items[item].img})`)
+    }
+
     doge('itemContainer').appendChild(itemDiv)
 
     if(typeof items[item].price === 'number') {
