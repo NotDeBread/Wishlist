@@ -73,23 +73,6 @@ const items = {
             }
         }
     },
-    marioWonder: {
-        name: 'Super Mario Bros. Wonder',
-        desc: '',
-        img: 'marioWonder.jpg',
-        tags: [
-            'Game',
-            'Digital'
-        ],
-        price: 60,
-        links: {
-            nintendo: {
-                name: 'Nintendo',
-                address: 'https://supermariobroswonder.nintendo.com/',
-                price: '$60'
-            }
-        }
-    },
     breadCatTee: {
         name: 'Bread Cat Tee',
         desc: 'A very cool shirt.',
