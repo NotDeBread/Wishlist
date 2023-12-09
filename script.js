@@ -59,22 +59,6 @@ const items = {
             }
         }
     },
-    ssd: {
-        name: 'SAMSUNG 980 PRO SSD',
-        desc: `The component of the computer that handles download speeds and holds storage.`,
-        img: 'ssd.png',
-        tags: [
-            'Tech'
-        ],
-        price: 86,
-        links: {
-            amazon: {
-                name: 'Amazon',
-                address: 'https://www.amazon.com/SAMSUNG-PCIe-Internal-Gaming-MZ-V8P1T0B/dp/B09JHL33X7/ref=sr_1_3?crid=20RN5O4YKW0B8&keywords=980%2Bevo&s=electronics&sprefix=980%2Bevo%2Celectronics%2C136&sr=1-3&ufe=app_do%3Aamzn1.fos.17d9e15d-4e43-4581-b373-0e5c1a776d5d&th=1',
-                price: '$85.55'
-            }
-        }
-    },
     ultrakillSweater: {
         name: 'ULTRAKILL Holiday sweater (pre-order)',
         desc: 'Super cool sweater from one of my favorite games.',
